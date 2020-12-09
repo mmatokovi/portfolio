@@ -145,6 +145,7 @@ dd{
 .project{
     color: var(--light-slate);
     background-color: var(--navy);
+    box-shadow: 5px 10px 30px -15px var(--navy-shadow);
     margin: 5px;
     border-radius: 9px 9px 9px 9px;
     text-align: center;
