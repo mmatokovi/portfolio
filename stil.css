@@ -10,11 +10,16 @@ body{
     margin-right: auto;
     overflow-x: hidden;
     color: white;
-    background-color: #0e305d;
+    background-color: var(--dark-bg);
 }
 h1, h2, h3, h4 {
     font-weight: 400;
     font-family: var(--font-Courier);
+}
+h3{
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--lightest-slate);
 }
 hr {
     border-top: 1px solid #eee;
@@ -47,7 +52,7 @@ nav a, #contact a, #footer a, #projects a{
     text-decoration: none;
 }
 a:hover{
-    color: #64ffda;
+    color: var(--green);
     transition: color .3s;
 }
 #links a {
@@ -62,19 +67,20 @@ header{
     display: block;
     font-weight: bold;
     box-shadow: #f1f1f1 0 1px inset;
-    background: linear-gradient(#e4e4e4,#b8b7b8);
+    background: var(--lightest-slate);
     border-radius: 4px 4px 0 0;
 }
 nav{
     z-index: 100;
     min-height: 40px;
     overflow: hidden;
-    background: #002646;
+    background: var(--dark-nav);
     position: fixed;
     width: 100%;
+box-shadow: 0 10px 30px -10px var(--navy-shadow)
 }
 .nav-bar{
-    background-color: #002646;
+    background-color: var(--dark-nav);
     height: 20px;
     max-width: 1140px;
     margin-left: auto;
@@ -85,8 +91,25 @@ nav a{
     display: inline;
     text-align: center;
 }
+ul.skills-list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    padding: 0px;
+    margin: 5px 20px 0px;
+    overflow: hidden;
+    list-style: outside none none;
+    color: var(--slate);
+}
+ul.skills-list li::before {
+    content: "▹";
+    left: 0px;
+    color: var(--green);
+    font-size: var(--fz-sm);
+    font-family: var(--font-mono);
+    line-height: 12px;
+}
 section{
-    background: #1b202e;
+    background: var(--light-navy);
     box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
     border-radius: 4px 4px 5px 5px;
     margin-bottom: 2em;
@@ -114,29 +137,23 @@ dd{
     flex-wrap: wrap;
 }
 .col, .project{
-    color:white;
     flex: 35%;
     padding: 10px;
     max-width: 300px;
 
 }
 .project{
+    color: var(--light-slate);
     background-color: var(--navy);
-    margin: 3px;
+    margin: 5px;
     border-radius: 9px 9px 9px 9px;
     text-align: center;
-}
-.project a{
-    border: 1px solid black;
-    background-color: orange;
-    padding: 3px;
-    font-weight: bold;
 }
 #contact, #footer{
     padding-left:8px;
     padding-top: 10px;
 }
-.resume-button {
+.resume-button, .work-button{
     color: var(--green);
     border: 1px solid var(--green);
     border-radius: 4px;
@@ -145,7 +162,7 @@ dd{
     text-decoration: none;
     cursor: pointer;
 }
-.resume-button:hover{
+.resume-button:hover, .work-button:hover{
     background-color: var(--green-tint);
     color: var(--green);
 }
@@ -167,6 +184,8 @@ dd{
     }
 }
 :root{
+    --dark-nav: #002646;
+    --dark-bg: #0e305d;
     --dark-navy: #020c1b;
     --navy: #0a192f;
     --light-navy: #172a45;
