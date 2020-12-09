@@ -43,6 +43,8 @@ footer{
     margin-right: auto;
 }
 a{
+
+    font-family: var(--font-mono);
     color: white;
 }
 #links a,{
@@ -77,7 +79,7 @@ nav{
     background: var(--dark-nav);
     position: fixed;
     width: 100%;
-box-shadow: 0 10px 30px -10px var(--navy-shadow)
+    box-shadow: 0 10px 30px -10px var(--navy-shadow)
 }
 .nav-bar{
     background-color: var(--dark-nav);
@@ -99,13 +101,12 @@ ul.skills-list{
     overflow: hidden;
     list-style: outside none none;
     color: var(--slate);
+    font-family: var(--font-mono);
 }
-ul.skills-list li::before {
+ul.skills-list li::before, dd::before{
     content: "▹";
     left: 0px;
     color: var(--red);
-    font-size: var(--fz-sm);
-    font-family: var(--font-mono);
     line-height: 12px;
 }
 section{
@@ -129,6 +130,8 @@ dd{
 }
 .container{
     padding: 10px;
+    font-family: var(--font-sans);
+    font-size: 18px;
 }
 .table, .projects{
     display: flex;
@@ -143,6 +146,8 @@ dd{
 
 }
 .project{
+    font-family: var(--font-sans);
+    font-size: 18px;
     color: var(--light-slate);
     background-color: var(--navy);
     box-shadow: 5px 10px 30px -15px var(--navy-shadow);
