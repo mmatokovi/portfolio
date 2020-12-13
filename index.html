@@ -7,6 +7,7 @@
     <link rel="icon" type="" href="<mm>">
     <title>Mislav</title>
     <script src="https://kit.fontawesome.com/b652bec72b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
         <nav>
@@ -56,7 +57,8 @@
                             <h3>Parking</h3><hr>
                             <p>The system is used to create and manage the company's parking spaces. 
                                 The system has the ability to log in and log off users with certain abilities in the system. 
-                                It records the arrival and departure of cars, adds companies parking spaces, moderators, users etc..</p><br>
+                                It records the arrival and departure of cars, adds companies parking spaces, moderators, users etc..</p>
+                            <br>
                             <dl>
                                 <dd>HTML, CSS, PHP, MySQL</dd>
                             </dl><br>
@@ -67,7 +69,13 @@
                             <h3>Lorem Ipsum</h3><hr>
                             <p>Minus praesentium architecto qui et. Aut aperiam nihil aliquid doloribus est placeat modi.
                                 Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.
-                                Voluptatem delectus eligendi et officiis animi quia. Facere beatae exercitationem sed.…</p><br>
+                                Voluptatem delectus eligendi et officiis animi quia. Facere beatae exercitationem sed.…
+                                Aut aperiam nihil aliquid doloribus est placeat modi.
+                                Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.
+                                Voluptatem delectus eligendi et .inus praesentium architecto qui et. Aut aperiam nihil aliquid doloribus est placeat modi.
+                                Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.</p>
+                            <a href="javascript:void();" class="readmore">-Read more...</a>
+                            <br>
                             <dl>
                                 <dd>Lorem Ipsum</dd>
                             </dl><br>
@@ -78,7 +86,14 @@
                             <h3>Lorem Ipsum</h3><hr>
                             <p>Minus praesentium architecto qui et. Aut aperiam nihil aliquid doloribus est placeat modi.
                                 Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.
-                                Voluptatem delectus eligendi et officiis animi quia. Facere beatae exercitationem sed.…</p><br>
+                                Voluptatem delectus eligendi et Minus praesentium architecto qui et.
+                                Aut aperiam nihil aliquid doloribus est placeat modi.
+                                Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.
+                                Voluptatem delectus eligendi et .inus praesentium architecto qui et. Aut aperiam nihil aliquid doloribus est placeat modi.
+                                Suscipit facere aut quam rem dolorem nihil non unde. Aut qui sed rerum odit exercitationem.
+                                Voluptatem delectus eligendi et ..</p>
+                            <a href="javascript:void();" class="readmore">-Read more...</a>
+                            <br>
                             <dl>
                                 <dd>Lorem Ipsum</dd>
                             </dl><br>
@@ -119,5 +134,13 @@
             </div>
             </div>
         </footer>
+    <script>
+        $(".readmore").on('click', function(){
+            $(this).parent().toggleClass("showContent");
+
+            var promjeniText=$(this).parent().hasClass("showContent") ? "-Read less" : "-Read more...";
+            $(this).text(promjeniText);
+        });
+    </script>
     </body>
 </html>

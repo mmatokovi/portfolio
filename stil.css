@@ -43,7 +43,6 @@ footer{
     margin-right: auto;
 }
 a{
-
     font-family: var(--font-mono);
     color: white;
 }
@@ -55,8 +54,15 @@ nav a, #contact a, #footer a, #projects a{
 }
 a:hover{
     color: var(--green);
-    transition: color .3s;
+    transition: all 0.3s ease;
 }
+/*
+a[href^="mailto:"]{ 
+    font-family: sans-serif;
+    color: var(--red);
+    font-size: 16px;
+}
+*/
 #links a {
     line-height: 2;
 }
@@ -135,15 +141,13 @@ dd{
 }
 .table, .projects{
     display: flex;
-    justify-content: center;
-    text-align: left;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .col, .project{
     flex: 35%;
     padding: 10px;
     max-width: 300px;
-
 }
 .project{
     font-family: var(--font-sans);
@@ -154,6 +158,23 @@ dd{
     margin: 5px;
     border-radius: 9px 9px 9px 9px;
     text-align: center;
+}
+.project p{
+    height: 169px;
+    overflow: hidden;
+}
+.project.showContent p{
+    height: auto;
+}
+.readmore{
+    font-size: 16px;
+    float: left;
+}
+.showContent a.readmore{
+    color: var(--red);
+}
+.showContent a.readmore:hover{
+    color: var(--red-tint);
 }
 #contact, #footer{
     padding-left:8px;
@@ -171,7 +192,9 @@ dd{
 .resume-button:hover, .work-button:hover{
     background-color: var(--green-tint);
     color: var(--green);
+    transition: all 0.3s ease;
 }
+
 @media screen and (max-width: 639px){
     .hidden-xxs {
         display: none !important;
@@ -202,10 +225,11 @@ dd{
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --red: #ff6489;
+    --red-tint: RGBA(255,100,137,0.7);
     --green: #64ffda;
-    --green-tint: rgba(100,255,218,0.1);
+    --green-tint: RGBA(100,255,218,0.1);
     --yellow: #ffda64;
-    --yellow-tint:rgba(255,218,100,0.1);
+    --yellow-tint:RGBA(255,218,100,0.1);
 
     --font-sans: 'Calibre','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
