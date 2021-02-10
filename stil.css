@@ -95,6 +95,13 @@ nav{
     margin-right: auto;
     padding: 10px;
 }
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size:20px;
+    display:none;
+}
 nav a{
     display: inline;
     text-align: center;
@@ -139,12 +146,17 @@ dd{
     font-family: var(--font-sans);
     font-size: 18px;
 }
-.table, .projects{
+.table{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.col, .project{
+.projects{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col{
     flex: 35%;
     padding: 10px;
     max-width: 300px;
@@ -155,9 +167,12 @@ dd{
     color: var(--light-slate);
     background-color: var(--navy);
     box-shadow: 5px 10px 30px -15px var(--navy-shadow);
+    flex: 35%;
+    padding: 10px;
+    max-width: 300px;
     margin: 5px;
     border-radius: 9px 9px 9px 9px;
-    text-align: center;
+    text-align: left;
 }
 .project p{
     height: 169px;
@@ -194,7 +209,36 @@ dd{
     color: var(--green);
     transition: all 0.3s ease;
 }
+.blur{
+    filter: blur(5px) brightness(0.7);
+    transition: var(--transition);
+    pointer-events: none;
+    user-select: none;
 
+}
+body.overflow{
+    overflow: hidden;
+}
+body .nav-bar{
+    background-color: transparent;
+}
+.sidebar{
+    display: none;
+}
+.sidebar.show{
+    display: block;
+    transform: translateX(0);
+    visibility: visible;
+    height: 15vh;
+    transition: var(--transition);
+
+text-align: center;
+}
+.sidebar ul{
+    list-style-type: none;
+text-align: center;
+margin: 15px;
+}
 @media screen and (max-width: 639px){
     .hidden-xxs {
         display: none !important;
@@ -205,6 +249,12 @@ dd{
     }
     .col, .project{
         flex: 70%;
+    }
+    .linkovi{
+        display:none;
+    }
+    .hamburger{
+        display: block;
     }
 }
 @media (min-width: 1024px;){

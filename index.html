@@ -9,22 +9,31 @@
     <script src="https://kit.fontawesome.com/b652bec72b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-    <body>
+    <body class="body">
         <nav>
             <div class="nav-bar">
                 <a href="#">&lt;mm<span class="hidden-xxs"></span>&gt;</a>
-                <div style="float:right">
+                <button class="hamburger" style="float:right" id="hamburger"><i class="fas fa-bars"></i></button>
+                <div class="linkovi" style="float:right">
                     <a href="#projects">Projects</a>
                     <a href="#links">Links</a>
                     <a href="resume.pdf" class="resume-button">Resume</a>
                 </div>
             </div>
+                <aside class="sidebar">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#links">Links</a></li>
+                    </ul>
+                    <a href="resume.pdf" class="resume-button">Resume</a>
+                </aside>
+        <div class="nav__overlay"></div>
         </nav>
         <div class="content">
             <section id="contact" style="padding-top:45px;">
                 <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
                 <div style="float:right">
-                    <a href="https://www.linkedin.com/in/mislav-matokovi%C4%87-930728103/" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
                     <a href="https://github.com/petoglav" target="_blank"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs" style="padding-right:3px;">Github</span></a>
                 </div>
             </section>
@@ -39,11 +48,11 @@
                         Voluptatem delectus eligendi et officiis animi quia. Facere beatae exercitationem sed.…</p><br>
                     <p>Here are a few technologies I've been working with recently:</p>
                     <ul class="skills-list">
-                        <li>HTML</li>
-                        <li>CSS/CASS</li>
-                        <li>PHP</li>
+                        <li>HTML & (S)CSS</li>
+                        <li>PHP/Laravel</li>
                         <li>JavaScript</li>
-                        <li>SQL</li>
+                        <li>Vue.js</li>
+                        <li>MySQL</li>
                     </ul>
                 </div>
             </section>
@@ -129,7 +138,7 @@
             <div id="footer">
             <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
             <div style="float:right">
-            <a href="https://www.linkedin.com/in/mislav-matokovi%C4%87-930728103/" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
             <a href="https://github.com/petoglav" target="_blank"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs">Github</span></a>
             </div>
             </div>
@@ -140,6 +149,25 @@
 
             var promjeniText=$(this).parent().hasClass("showContent") ? "-Read less" : "-Read more...";
             $(this).text(promjeniText);
+        });
+    </script>
+    <script>
+        $(".hamburger").on('click', function(){
+            document.querySelector('.body').classList.toggle('overflow');
+            document.querySelector('.content').classList.toggle('blur');
+            document.querySelector('.sidebar').classList.toggle('show');
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.querySelector("#hamburger").addEventListener("click", () => {
+                document.querySelector("nav").classList.add("show");
+            });
+
+            document.querySelector(".nav__overlay").addEventListener("click", () => {
+                document.querySelector("nav").classList.remove("show");
+            });
         });
     </script>
     </body>
