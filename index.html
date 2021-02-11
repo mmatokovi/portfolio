@@ -12,7 +12,7 @@
     <body class="body">
         <nav>
             <div class="nav-bar">
-                <a href="#">&lt;mm<span class="hidden-xxs"></span>&gt;</a>
+                <a href="#">&lt;mm&gt;</a>
                 <button class="hamburger" style="float:right" id="hamburger"><i class="fas fa-bars"></i></button>
                 <div class="linkovi" style="float:right">
                     <a href="#projects">Projects</a>
@@ -27,7 +27,7 @@
                     </ul>
                     <a href="resume.pdf" class="resume-button">Resume</a>
                 </aside>
-        <div class="nav__overlay"></div>
+            <div class="nav__overlay"></div>
         </nav>
         <div class="content">
             <section id="contact" style="padding-top:45px;">
@@ -162,11 +162,11 @@
         document.addEventListener("DOMContentLoaded", () => {
 
             document.querySelector("#hamburger").addEventListener("click", () => {
-                document.querySelector("nav").classList.add("show");
+                document.querySelector(".sidebar").classList.add("show");
             });
 
-            document.querySelector(".nav__overlay").addEventListener("click", () => {
-                document.querySelector("nav").classList.remove("show");
+            document.querySelector(".content").addEventListener("click", () => {
+                document.querySelector(".sidebar").classList.remove("show");
             });
         });
     </script>

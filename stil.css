@@ -94,6 +94,7 @@ nav{
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    font-size: 20px;
 }
 .hamburger{
     background-color: transparent;
@@ -101,6 +102,10 @@ nav{
     color: white;
     font-size:20px;
     display:none;
+    padding-right:8px;
+}
+.hamburger:focus{
+    outline: none;
 }
 nav a{
     display: inline;
@@ -216,11 +221,12 @@ dd{
     user-select: none;
 
 }
+.show .nav__overlay {
+    visibility: visible;
+    opacity: 1;
+}
 body.overflow{
     overflow: hidden;
-}
-body .nav-bar{
-    background-color: transparent;
 }
 .sidebar{
     display: none;
@@ -231,13 +237,13 @@ body .nav-bar{
     visibility: visible;
     height: 15vh;
     transition: var(--transition);
-
-text-align: center;
+    text-align: center;
 }
 .sidebar ul{
     list-style-type: none;
-text-align: center;
-margin: 15px;
+    text-align: center;
+    margin: 15px;
+    font-size: 20px;
 }
 @media screen and (max-width: 639px){
     .hidden-xxs {
