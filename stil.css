@@ -93,16 +93,15 @@ nav{
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
     font-size: 17px;
 }
 .hamburger{
     background-color: transparent;
     border: 0;
     color: white;
-    font-size:20px;
+    font-size:32px;
     display:none;
-    padding-right:8px;
+    margin-right:3px;
 }
 .hamburger:focus, #logo:focus, a:focus{
     outline: none;
@@ -137,6 +136,7 @@ dd{
     font-family:  var(--font-mono);
     font-size: 12px;
     color: var(--slate);
+    margin-top: 3px;
 }
 .content{ 
     box-sizing: border-box;
@@ -219,7 +219,6 @@ dd{
     transition: var(--transition);
     pointer-events: none;
     user-select: none;
-
 }
 .show{
     visibility: visible;
@@ -233,9 +232,8 @@ body.overflow{
 }
 .sidebar.show{
     display: block;
-    transform: translateX(0vw);
     visibility: visible;
-    height: 25vh;
+    height: 26vh;
     transition: var(--transition);
     text-align: center;
 }
@@ -261,7 +259,7 @@ body.overflow{
         flex: 70%;
     }
     .linkovi{
-        display:none;
+        display:none !important;
     }
     .hamburger{
         display: block;
@@ -290,7 +288,7 @@ body.overflow{
     --green-tint: RGBA(100,255,218,0.1);
     --yellow: #ffda64;
     --yellow-tint:RGBA(255,218,100,0.1);
-    --transition: all 0.35s cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 
     --font-sans: 'Calibre','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;

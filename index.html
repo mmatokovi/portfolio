@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="stil.css">
-    <link rel="icon" type="" href="<mm>">
     <title>Mislav</title>
+    <link rel="icon" type="image/png" href="mislete.svg.png" sizes="32x32" />
     <script src="https://kit.fontawesome.com/b652bec72b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-    <body class="body">
+    <body class="">
         <nav>
             <div class="nav-bar">
-                <a href="#" id="logo" class="">&lt;mm&gt;</a>
+                <a href="#" id="logo" class=""><img src="mislete.svg.png" height="32px" width="38px" style="padding: 3px;"></a>
                 <button class="hamburger" style="float:right" id="hamburger"><i class="fas fa-bars"></i></button>
-                <div class="linkovi" style="float:right">
+                <div class="linkovi" style="float:right; padding:10px;">
                     <a href="#projects">Projects</a>
                     <a href="#links">Links</a>
                     <a href="resume.pdf" class="resume-button">Resume</a>
@@ -153,7 +153,7 @@
     </script>
     <script>
         $('.hamburger, .sidebar>ul>li>a, .sidebar>a, #mm').on('click', function(){
-            document.querySelector('.body').classList.toggle('overflow');
+            document.querySelector('body').classList.toggle('overflow');
             document.querySelector('.fas').classList.toggle('fa-times');
             document.querySelector('.content').classList.toggle('blur');
             document.querySelector('.sidebar').classList.toggle('show');
@@ -161,7 +161,7 @@
         });
         $('html').click(function(event) {
             if ($(event.target).closest('nav, .show').length === 0) {
-                document.querySelector('.body').classList.remove('overflow');
+                document.querySelector('body').classList.remove('overflow');
                 document.querySelector('.fas').classList.remove('fa-times');
                 document.querySelector('.content').classList.remove('blur');
                 document.querySelector('.sidebar').classList.remove('show');
@@ -169,7 +169,7 @@
             }
         });
         $('#logo').on('click', function(){
-                document.querySelector('.body').classList.remove('overflow');
+                document.querySelector('body').classList.remove('overflow');
                 document.querySelector('.fas').classList.remove('fa-times');
                 document.querySelector('.content').classList.remove('blur');
                 document.querySelector('.sidebar').classList.remove('show');
