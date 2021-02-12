@@ -101,7 +101,8 @@ nav{
     color: white;
     font-size:32px;
     display:none;
-    margin-right:3px;
+    margin-right:10px;
+
 }
 .hamburger:focus, #logo:focus, a:focus{
     outline: none;
