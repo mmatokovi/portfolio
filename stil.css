@@ -235,7 +235,7 @@ body.overflow{
     display: block;
     transform: translateX(0vw);
     visibility: visible;
-    height: 18vh;
+    height: 25vh;
     transition: var(--transition);
     text-align: center;
 }
