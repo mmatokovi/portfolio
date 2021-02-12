@@ -102,7 +102,6 @@ nav{
     font-size:32px;
     display:none;
     margin-right:10px;
-
 }
 .hamburger:focus, #logo:focus, a:focus{
     outline: none;
@@ -240,6 +239,9 @@ body.overflow{
 }
 .sidebar ul{
     list-style-type: none;
+    margin: 15px;
+}
+.sidebar li{
     text-align: center;
     margin: 15px;
     font-size: 20px;
