@@ -12,10 +12,12 @@
     <body class="">
         <nav>
             <div class="nav-bar">
-                <a href="#" id="logo" class=""><img src="mislete.svg.png" height="32px" width="38px" style="padding: 3px;"></a>
+                <a href="#" class=""><img src="mislete.svg.png" id="logo" height="32px" width="38px" style="padding: 3px; padding-left:8px;"></a>
                 <button class="hamburger" style="float:right" id="hamburger"><i class="fas fa-bars"></i></button>
                 <div class="linkovi" style="float:right; padding:10px;">
+                    <a href="#About">About</a>
                     <a href="#projects">Projects</a>
+                    <a href="#Art">Art</a>
                     <a href="#links">Links</a>
                     <a href="resume.pdf" class="resume-button">Resume</a>
                 </div>
@@ -24,6 +26,7 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#art">Art</a></li>
                     <li><a href="#links">Links</a></li>
                 </ul>
                 <a href="resume.pdf" target="_blank" class="resume-button">Resume</a>
@@ -112,6 +115,20 @@
                     </div>
                 </div>
             </section>
+            <section id="art">
+                <header>Art</header>
+                <div class="container">
+                    <h1>My "Art"</h1><hr>
+                    <p>Things I've scribbled.</p><br>
+                    <img id="myImg" onclick="myFunc(this)" src="img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+                    <img id="myImg" onclick="myFunc(this)" src="img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+                    <div id="myModal" class="modal">
+                      <span class="close">&times;</span>
+                      <img class="modal-content" id="img01">
+                      <div id="caption"></div>
+                    </div>
+                </div>
+            </section>
             <section id="links">
                 <header>Links</header>
                 <div class="container">
@@ -175,6 +192,27 @@
                 document.querySelector('.sidebar').classList.remove('show');
                 document.querySelector('#footer').classList.remove('blur');
         });
+    </script>
+    <script>
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var span = document.getElementsByClassName("close")[0];
+        function myFunc(el){
+            var imgSrc = el.src;
+            var altText = el.alt;
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            captionText.innerHTML = altText;
+        }
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
     </script>
     </body>
 </html>
