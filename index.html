@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="stil.css">
     <title>Mislav</title>
-    <link rel="icon" type="image/png" href="img/mislete.svg.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <script src="https://kit.fontawesome.com/b652bec72b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body class="">
         <nav>
             <div class="nav-bar">
-                <a href="#" class=""><img src="img/mislete.svg.png" id="logo" height="32px" width="38px" style="padding: 3px; padding-left:8px;"></a>
+                <a href="#"><img src="img/mislete.svg.png" id="logo" height="32px" width="38px" style="padding: 3px; padding-left:8px;"></a>
                 <button class="hamburger" style="float:right" id="hamburger"><i class="fas fa-bars"></i></button>
                 <div class="linkovi" style="float:right; padding:10px;">
                     <a href="#about">About</a>
@@ -36,8 +36,8 @@
             <section id="contact" style="padding-top:45px;">
                 <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
                 <div style="float:right">
-                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
-                    <a href="https://github.com/petoglav" target="_blank"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs" style="padding-right:3px;">Github</span></a>
+                    <a href="https://www.linkedin.com/in/mislav-matoković" target="_self"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
+                    <a href="https://github.com/petoglav" target="_self"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs" style="padding-right:3px;">Github</span></a>
                 </div>
             </section>
             <section id="about">
@@ -52,10 +52,11 @@
                     <p>Here are a few technologies I've been working with recently:</p>
                     <ul class="skills-list">
                         <li>HTML & (S)CSS</li>
-                        <li>PHP/Laravel</li>
                         <li>JavaScript</li>
-                        <li>Vue.js</li>
+                        <li>PHP/Laravel</li>
                         <li>MySQL</li>
+                        <li>Vue.js</li>
+                        <li>L<span style="text-transform: uppercase; font-size: 0.75em; vertical-align: 0.25em; margin-left: -0.36em; margin-right: -0.15em; line-height: 1ex;">a</span>T<span style="text-transform: uppercase; vertical-align: -0.25em; margin-left: -0.1667em; margin-right: -0.125em; line-height: 1ex;">e</span>X</li>
                     </ul>
                 </div>
             </section>
@@ -122,6 +123,7 @@
                     <p>Things I've scribbled.</p><br>
                     <img id="myImg" onclick="myFunc(this)" src="img/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
                     <img id="myImg" onclick="myFunc(this)" src="img/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+                    <img id="myImg" onclick="myFunc(this)" src="img/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
                     <div id="myModal" class="modal">
                       <span class="close">&times;</span>
                       <img class="modal-content" id="img01">
@@ -140,7 +142,7 @@
                         </div>
                         <div class="col">
                             <h2>Follow me</h2>
-                            <i class="fab fa-linkedin"></i>&nbsp;<a href="https://www.linkedin.com/in/mislav-matokovi%C4%87-930728103/" target="_blank">LinkedIn</a><br>
+                            <i class="fab fa-linkedin"></i>&nbsp;<a href="https://www.linkedin.com/in/mislav-matoković" target="_blank">LinkedIn</a><br>
                             <i class="fab fa-github"></i>&nbsp;<a href="https://github.com/petoglav" target="_blank">Github</a>
                         </div>
                         <div class="col">
@@ -153,11 +155,11 @@
         </div>
         <footer>
             <div id="footer">
-            <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
-            <div style="float:right">
-            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
-            <a href="https://github.com/petoglav" target="_blank"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs">Github</span></a>
-            </div>
+                <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
+                <div style="float:right">
+                    <a href="https://www.linkedin.com/in/mislav-matoković" target="_self"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
+                    <a href="https://github.com/petoglav" target="_self"><i class="fab fa-github"></i>&nbsp;<span class="hidden-xxs">Github</span></a>
+                </div>
             </div>
         </footer>
     <script>
@@ -169,7 +171,7 @@
         });
     </script>
     <script>
-        $('.hamburger, .sidebar>ul>li>a, .sidebar>a, #mm').on('click', function(){
+        $('.hamburger, .sidebar>ul>li>a, .sidebar>a').on('click', function(){
             document.querySelector('body').classList.toggle('overflow');
             document.querySelector('.fas').classList.toggle('fa-times');
             document.querySelector('.content').classList.toggle('blur');
@@ -204,14 +206,17 @@
             modal.style.display = "block";
             modalImg.src = imgSrc;
             captionText.innerHTML = altText;
+            document.body.style.overflow = "hidden";
         }
         window.onclick = function(event){
             if(event.target == modal){
                 modal.style.display = "none";
+                document.body.style.overflow = "";
             }
         }
         span.onclick = function() { 
           modal.style.display = "none";
+          document.body.style.overflow = "";
         }
     </script>
     </body>

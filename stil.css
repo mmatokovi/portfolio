@@ -55,6 +55,7 @@ nav a, #contact a, #footer a, #projects a{
 a:hover{
     color: var(--green);
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 /*
 a[href^="mailto:"]{ 
@@ -109,6 +110,7 @@ nav{
 nav a{
     display: inline;
     text-align: center;
+    text-decoration: underline;
 }
 ul.skills-list{
     display: grid;
@@ -158,7 +160,7 @@ dd{
 }
 .projects{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .col{
@@ -233,7 +235,7 @@ body.overflow{
 .sidebar.show{
     display: block;
     visibility: visible;
-    height: 28vh;
+    height: 30vh;
     transition: var(--transition);
     text-align: center;
 }
@@ -333,11 +335,6 @@ body.overflow{
     }
     .modal-content {
         width: 100%;
-    }
-}
-@media (min-width: 1024px){
-    table{
-        width: 80%;
     }
 }
 :root{
