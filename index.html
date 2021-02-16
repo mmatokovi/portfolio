@@ -33,7 +33,7 @@
         </aside>
     </nav>
     <div class="content">
-        <section id="contact" style="padding-top:45px;">
+        <section id="contact"  class="fadeInDown" style="padding-top:45px;">
             <a href="mailto:mislav.mat@outlook.com"><i class="fa fa-envelope"></i>&nbsp;<span class="hidden-xxs">mislav.mat@outlook.com</span></a>
             <div style="float:right">
                 <a href="https://www.linkedin.com/in/mislav-matoković" target="_self"><i class="fab fa-linkedin"></i>&nbsp;<span class="hidden-xxs">LinkedIn</span></a>
@@ -41,7 +41,7 @@
             </div>
             <noscript style="color:#ffda64; text-align:center; text-decoration:underline;"><p>Sorry, your browser does not support JavaScript! Leave!</p></noscript>
         </section>
-        <section id="about">
+        <section id="about" class="fadeInDown">
             <header>About</header>
             <div class="container">
                 <h1>About me</h1>
@@ -60,7 +60,7 @@
                 </ul>
             </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="fadeInDown">
             <header>Projects</header>
             <div class="container">
                 <h1>My Projects</h1><hr>
@@ -101,7 +101,7 @@
             </div>
         </div>
     </section>
-    <section id="art">
+    <section id="art" class="fadeInDown">
         <header>Art</header>
         <div class="container">
             <h1>My "Art"</h1><hr>
@@ -118,7 +118,7 @@
             </div>
         </div>
     </section>
-    <section id="links">
+    <section id="links" class="fadeInDown">
         <header>Links</header>
         <div class="container">
             <div class="table">
@@ -149,63 +149,6 @@
             </div>
         </div>
     </footer>
-<script>
-    $(".readmore").on('click', function(){
-        $(this).parent().toggleClass("showContent");
-
-        var promjeniText=$(this).parent().hasClass("showContent") ? "-Read less" : "-Read more...";
-        $(this).text(promjeniText);
-    });
-</script>
-<script>
-    $('.hamburger, .sidebar>ul>li>a, .sidebar>a').on('click', function(){
-        document.querySelector('body').classList.toggle('overflow');
-        document.querySelector('.fas').classList.toggle('fa-times');
-        document.querySelector('.content').classList.toggle('blur');
-        document.querySelector('.sidebar').classList.toggle('show');
-        document.querySelector('#footer').classList.toggle('blur');
-    });
-    $('html').click(function(event) {
-        if ($(event.target).closest('nav, .show').length === 0) {
-            document.querySelector('body').classList.remove('overflow');
-            document.querySelector('.fas').classList.remove('fa-times');
-            document.querySelector('.content').classList.remove('blur');
-            document.querySelector('.sidebar').classList.remove('show');
-            document.querySelector('#footer').classList.remove('blur');
-        }
-    });
-    $('#logo').on('click', function(){
-            document.querySelector('body').classList.remove('overflow');
-            document.querySelector('.fas').classList.remove('fa-times');
-            document.querySelector('.content').classList.remove('blur');
-            document.querySelector('.sidebar').classList.remove('show');
-            document.querySelector('#footer').classList.remove('blur');
-    });
-</script>
-<script>
-    var modal = document.getElementById('myModal');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    var span = document.getElementsByClassName("close")[0];
-
-    function myFunc(el){
-        var imgSrc = el.src;
-        var altText = el.alt;
-        modal.style.display = "block";
-        modalImg.src = imgSrc;
-        captionText.innerHTML = altText;
-        document.body.style.overflow = "hidden";
-    }
-    window.onclick = function(event){
-        if(event.target == modal){
-            modal.style.display = "none";
-            document.body.style.overflow = "";
-        }
-    }
-    span.onclick = function() { 
-      modal.style.display = "none";
-      document.body.style.overflow = "";
-    }
-</script>
+    <script src="conf.js"></script>
 </body>
 </html>
