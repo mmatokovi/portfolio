@@ -12,7 +12,7 @@ body{
     color: white;
     background-color: var(--dark-bg);
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4{
     font-weight: 400;
     font-family: var(--font-Courier);
 }
@@ -45,23 +45,23 @@ footer{
 }
 a{
     font-family: var(--font-mono);
-    color: white;
+    color: var(--white);
+    transition: color .5s;
 }
 nav a, #contact a, #footer a, #projects a{
     text-decoration: none;
 }
-a:hover{
+a:hover, a:focus{
     color: var(--green);
-    transition: all 0.3s ease;
+    transition: color .5s;
     text-decoration: none;
 }
-/*
-a[href^="mailto:"]{ 
-    font-family: sans-serif;
-    color: var(--red);
-    font-size: 16px;
+@keyframes color{
+    transition-property: color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
-*/
 #links a {
     line-height: 2;
     text-decoration: underline;
@@ -85,7 +85,7 @@ nav{
     background: var(--dark-nav);
     position: fixed;
     width: 100%;
-    box-shadow: 0 10px 30px -10px var(--navy-shadow)
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
 }
 .nav-bar{
     background-color: var(--dark-nav);
@@ -120,7 +120,7 @@ ul.skills-list{
     color: var(--slate);
     font-family: var(--font-mono);
 }
-ul.skills-list li::before, dd::before{
+ul.skills-list li::before, dt::before{
     content: "▹";
     left: 0px;
     color: var(--red);
@@ -132,7 +132,7 @@ section{
     border-radius: 4px 4px 5px 5px;
     margin-bottom: 2em;
 }
-dd{
+dt{
     font-family:  var(--font-mono);
     font-size: 12px;
     color: var(--slate);
@@ -147,7 +147,7 @@ dd{
     padding-left: 30px;
 }
 .fadeInDown{
-    animation: fadeInDown 1.5s;
+    animation: fadeInDown 1.1s;
 }
 @keyframes fadeInDown{
     from{
@@ -216,7 +216,7 @@ dd{
     color: var(--green);
     border: 1px solid var(--green);
     border-radius: 4px;
-    padding: 0.35rem 0.35rem;
+    padding: 0.35rem;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
@@ -241,12 +241,13 @@ body.overflow{
 .sidebar.show{
     display: block;
     visibility: visible;
-    height: 30vh;
+    height: 35vh;
+    transition: var(--transition);
     text-align: center;
 }
 .sidebar ul{
     list-style-type: none;
-    margin: 15px;
+    margin: 25px;
 }
 .sidebar li{
     text-align: center;
@@ -271,7 +272,7 @@ body.overflow{
 #myImg:hover,#logo:hover{
     opacity: 0.5;
 }
-.modal {
+.modal{
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -284,7 +285,7 @@ body.overflow{
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9); 
 }
-.modal-content {
+.modal-content{
     margin: auto;
     display: block;
     width: 80%;
@@ -298,13 +299,13 @@ body.overflow{
     text-align: center;
     color: white;
     padding: 10px 0;
-    height: 50px;
+    height: auto;
 }
-.modal-content, #caption {  
+.modal-content, #caption{  
     animation-name: zoom;
     animation-duration: 0.6s;
 }
-@keyframes zoom {
+@keyframes zoom{
     from {
         transform: scale(0.1)
     } 
@@ -312,7 +313,7 @@ body.overflow{
         transform: scale(1)
     }
 }
-.close {
+.close{
     position: absolute;
     top: 15px;
     right: 35px;
@@ -321,13 +322,13 @@ body.overflow{
     font-weight: bold;
     transition: 0.3s;
 }
-.close:hover,.close:focus {
+.close:hover,.close:focus{
     color: var(--green);
     text-decoration: none;
     cursor: pointer;
 }
 @media screen and (max-width: 639px){
-    .hidden-xxs {
+    .hidden-xxs{
         display: none !important;
     }
     .content{
@@ -343,7 +344,7 @@ body.overflow{
     .hamburger{
         display: block;
     }
-    .modal-content {
+    .modal-content{
         width: 100%;
     }
 }
