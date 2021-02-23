@@ -232,10 +232,6 @@ dd{
     pointer-events: none;
     user-select: none;
 }
-.show{
-    visibility: visible;
-    opacity: 1;
-}
 body.overflow{
     overflow: hidden;
 }
@@ -246,7 +242,6 @@ body.overflow{
     display: block;
     visibility: visible;
     height: 30vh;
-    transition: var(--transition);
     text-align: center;
 }
 .sidebar ul{
@@ -259,7 +254,7 @@ body.overflow{
     font-size: 20px;
 }
 .fa-times{
-    transition: transform 0.35s;
+    transition: transform 0.25s;
     transform: rotate(90deg);
 }
 #logo{

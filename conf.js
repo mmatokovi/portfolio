@@ -5,29 +5,29 @@ $(".readmore").on('click', function(){
     $(this).text(promjeniText);
 });
 
+var body = document.querySelector('body');
+var fas = document.querySelector('.fas');
+var content = document.querySelector('.content');
+var sidebar = document.querySelector('.sidebar');
+var footer = document.querySelector('#footer');
+var logo = document.querySelector('#logo');
+
 $('.hamburger, .sidebar>ul>li>a, .sidebar>a').on('click', function(){
-    document.querySelector('body').classList.toggle('overflow');
-    document.querySelector('.fas').classList.toggle('fa-times');
-    document.querySelector('.content').classList.toggle('blur');
-    document.querySelector('.sidebar').classList.toggle('show');
-    document.querySelector('#footer').classList.toggle('blur');
+    body.classList.toggle('overflow');
+    fas.classList.toggle('fa-times');
+    content.classList.toggle('blur');
+    sidebar.classList.toggle('show');
+    footer.classList.toggle('blur');
 });
 
 $('html').click(function(event) {
-    if ($(event.target).closest('nav, .show').length === 0) {
-        document.querySelector('body').classList.remove('overflow');
-        document.querySelector('.fas').classList.remove('fa-times');
-        document.querySelector('.content').classList.remove('blur');
-        document.querySelector('.sidebar').classList.remove('show');
-        document.querySelector('#footer').classList.remove('blur');
+    if ($(event.target).closest('nav, .show').length === 0 || event.target == logo) {
+        body.classList.remove('overflow');
+        fas.classList.remove('fa-times');
+        content.classList.remove('blur');
+        sidebar.classList.remove('show');
+        footer.classList.remove('blur');
     }
-});
-$('#logo').on('click', function(){
-        document.querySelector('body').classList.remove('overflow');
-        document.querySelector('.fas').classList.remove('fa-times');
-        document.querySelector('.content').classList.remove('blur');
-        document.querySelector('.sidebar').classList.remove('show');
-        document.querySelector('#footer').classList.remove('blur');
 });
 
 var modal = document.getElementById('myModal');
@@ -50,6 +50,6 @@ window.onclick = function(event){
     }
 }
 span.onclick = function() { 
-  modal.style.display = "none";
-  document.body.style.overflow = "";
+    modal.style.display = "none";
+    document.body.style.overflow = "";
 }
