@@ -220,7 +220,7 @@ dt{
     padding-left:8px;
     padding-top: 10px;
 }
-.resume-button, .work-button{
+.resume-button{
     color: var(--green);
     border: 1px solid var(--green);
     border-radius: 4px;
@@ -229,6 +229,20 @@ dt{
     text-decoration: none;
     cursor: pointer;
 }
+.work-button{
+    margin-left: 20px;
+    color: var(--green);
+    border-radius: 4px;
+    padding: 0.35rem;
+    line-height: 1;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.center {
+    margin: auto;
+    width: 50%;
+  }
 .resume-button:hover, .work-button:hover{
     background-color: var(--green-tint);
     color: var(--green);
