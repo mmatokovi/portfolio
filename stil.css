@@ -54,6 +54,10 @@ a{
     color: var(--white);
     transition: color .5s;
 }
+.inactiveLink{
+pointer-events: none;
+cursor: default;
+}
 nav a, #contact a, #footer a, #projects a{
     text-decoration: none;
 }
